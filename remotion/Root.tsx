@@ -1,5 +1,5 @@
 import { Composition } from "remotion";
-import { Main } from "./MyComp/Main";
+import { Main } from "./trivia/Main";
 import {
   COMP_NAME,
   defaultMyCompProps,
@@ -22,7 +22,7 @@ export const RemotionRoot: React.FC = () => {
         height={VIDEO_HEIGHT}
         defaultProps={defaultMyCompProps}
       />
-      <Composition
+      {/* <Composition
         id="NextLogo"
         component={NextLogo}
         durationInFrames={300}
@@ -32,7 +32,7 @@ export const RemotionRoot: React.FC = () => {
         defaultProps={{
           outProgress: 0,
         }}
-      />
+      /> */}
     </>
   );
 };
