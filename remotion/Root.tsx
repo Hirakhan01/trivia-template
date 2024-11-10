@@ -1,5 +1,6 @@
+import React from "react";
 import { Composition } from "remotion";
-import { Main } from "./trivia/Main";
+import { calculateMainMetadata, Main } from "./trivia/Main";
 import {
   COMP_NAME,
   defaultMyCompProps,
@@ -8,7 +9,8 @@ import {
   VIDEO_HEIGHT,
   VIDEO_WIDTH,
 } from "../types/constants";
-import { NextLogo } from "./MyComp/NextLogo";
+
+
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -21,6 +23,7 @@ export const RemotionRoot: React.FC = () => {
         width={VIDEO_WIDTH}
         height={VIDEO_HEIGHT}
         defaultProps={defaultMyCompProps}
+        calculateMetadata={calculateMainMetadata} // Pass the calculateMetadata function
       />
       {/* <Composition
         id="NextLogo"
